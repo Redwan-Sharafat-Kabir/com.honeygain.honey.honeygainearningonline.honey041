@@ -1,8 +1,9 @@
-package com.honeygaincash.honeygaincase038;
+package com.honeygaincash.honeygaincase041;
 
 
+import static com.honeygaincash.honeygaincase041.honeygaincase041_SplashActivity.dialogbox;
 
-import static com.honeygaincash.honeygaincase038.honeygaincase038_SplashActivity.dialogbox;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,17 +12,18 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
-public class honeygaincase038_Thank_you extends AppCompatActivity {
 
+public class honeygaincase041_MainActivity2 extends AppCompatActivity {
+
+    Button btn1;
     public String TAG = String.valueOf(getClass());
 
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView((int) R.layout.honeygaincase038_thank_you);
+        setContentView(R.layout.honeygaincase041_main2);
+
+        dialogbox(this);
 
         int[] containerIDs = {
                 R.id.fragmentContainer1, R.id.fragmentContainer2, R.id.fragmentContainer3,
@@ -37,19 +39,29 @@ public class honeygaincase038_Thank_you extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < containerIDs.length; i++) {
-            UnifiedWebViewFragment1 fragment = new UnifiedWebViewFragment1();
+            honeygaincase041_UnifiedWebViewFragment1 fragment = new honeygaincase041_UnifiedWebViewFragment1();
             String tag = "fragmentTag" + (i + 1);
             fragmentTransaction.replace(containerIDs[i], fragment, tag);
         }
 
         fragmentTransaction.commit();
 
-        ((Button) findViewById(R.id.visitr)).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                honeygaincase038_Thank_you.this.finishAffinity();
-                honeygaincase038_Thank_you.this.finish();
+
+        btn1 = findViewById(R.id.btn1);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(honeygaincase041_MainActivity2.this, honeygaincase041_Continue_Next.class);
+                startActivity(i);
             }
         });
+
+    }
+
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 
 }
+

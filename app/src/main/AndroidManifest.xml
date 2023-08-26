@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.honeygaincash.honeygaincase038">
+    package="com.honeygaincash.honeygaincase041">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <application
@@ -18,43 +18,43 @@
 
 
         <activity
-            android:name=".honeygaincase038_Continue_Next"
+            android:name=".honeygaincase041_Continue_Next"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".honeygaincase038_submit"
+            android:name=".honeygaincase041_submit"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".honeygaincase038_DetailsActivity"
+            android:name=".honeygaincase041_DetailsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".honeygaincase038_MainActivity2"
+            android:name=".honeygaincase041_MainActivity2"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".honeygaincase038_start_page"
+            android:name=".honeygaincase041_start_page"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".honeygaincase038_MainActivity"
+            android:name=".honeygaincase041_MainActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".honeygaincase038_Next"
+            android:name=".honeygaincase041_Next"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".honeygaincase038_Exit"
+            android:name=".honeygaincase041_Exit"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".honeygaincase038_Thank_you"
+            android:name=".honeygaincase041_Thank_you"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".honeygaincase038_SplashActivity"
+            android:name=".honeygaincase041_SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

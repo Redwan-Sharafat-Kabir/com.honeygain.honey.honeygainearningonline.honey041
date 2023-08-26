@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
 
-    <include layout="@layout/honeygaincase038_relativelayout" />
+    <include layout="@layout/honeygaincase041_relativelayout" />
 
 
 
@@ -21,7 +21,7 @@
         android:layout_gravity="center"
         android:layout_margin="15dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/honeygaincase038_ss2"
+        android:src="@drawable/honeygaincase041_ss2"
         android:text="start" />
 
 

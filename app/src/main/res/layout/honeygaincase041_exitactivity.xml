@@ -6,7 +6,7 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <include layout="@layout/honeygaincase038_relativelayout" />
+    <include layout="@layout/honeygaincase041_relativelayout" />
 
 
 
@@ -71,7 +71,7 @@
                 android:text="Yes Exit "
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                app:icon="@drawable/honeygaincase038_baseline_exit_to_app_24"
+                app:icon="@drawable/honeygaincase041_baseline_exit_to_app_24"
                 app:iconTint="@color/white" />
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -85,7 +85,7 @@
                 android:text="Previous"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                app:icon="@drawable/honeygaincase038_baseline_arrow_forward_24"
+                app:icon="@drawable/honeygaincase041_baseline_arrow_forward_24"
                 app:iconGravity="end"
                 app:iconTint="@color/white" />
 

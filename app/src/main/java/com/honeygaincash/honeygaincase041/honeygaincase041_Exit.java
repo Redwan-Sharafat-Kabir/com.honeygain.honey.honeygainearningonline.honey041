@@ -1,6 +1,6 @@
-package com.honeygaincash.honeygaincase038;
+package com.honeygaincash.honeygaincase041;
 
-import static com.honeygaincash.honeygaincase038.honeygaincase038_SplashActivity.dialogbox;
+import static com.honeygaincash.honeygaincase041.honeygaincase041_SplashActivity.dialogbox;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
-public class honeygaincase038_Exit extends AppCompatActivity {
+public class honeygaincase041_Exit extends AppCompatActivity {
     public String TAG = String.valueOf(getClass());
 
     public void onBackPressed() {
@@ -21,7 +21,7 @@ public class honeygaincase038_Exit extends AppCompatActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.honeygaincase038_exitactivity);
+        setContentView(R.layout.honeygaincase041_exitactivity);
 
         dialogbox(this);
 
@@ -39,7 +39,7 @@ public class honeygaincase038_Exit extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < containerIDs.length; i++) {
-            UnifiedWebViewFragment1 fragment = new UnifiedWebViewFragment1();
+            honeygaincase041_UnifiedWebViewFragment1 fragment = new honeygaincase041_UnifiedWebViewFragment1();
             String tag = "fragmentTag" + (i + 1);
             fragmentTransaction.replace(containerIDs[i], fragment, tag);
         }
@@ -50,14 +50,14 @@ public class honeygaincase038_Exit extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.exitapp);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                honeygaincase038_Exit.this.startActivity(new Intent(honeygaincase038_Exit.this, honeygaincase038_Thank_you.class));
+                honeygaincase041_Exit.this.startActivity(new Intent(honeygaincase041_Exit.this, honeygaincase041_Thank_you.class));
 
             }
         });
         Button button1 = (Button) findViewById(R.id.btn_no);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                honeygaincase038_Exit.this.startActivity(new Intent(honeygaincase038_Exit.this, honeygaincase038_start_page.class));
+                honeygaincase041_Exit.this.startActivity(new Intent(honeygaincase041_Exit.this, honeygaincase041_start_page.class));
             }
         });
     }

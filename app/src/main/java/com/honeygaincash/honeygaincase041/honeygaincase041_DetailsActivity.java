@@ -1,28 +1,22 @@
-package com.honeygaincash.honeygaincase038;
+package com.honeygaincash.honeygaincase041;
 
 
-import static com.honeygaincash.honeygaincase038.honeygaincase038_SplashActivity.dialogbox;
-import static com.honeygaincash.honeygaincase038.honeygaincase038_SplashActivity.dialogbox;
-
-import android.content.Intent;
+import static com.honeygaincash.honeygaincase041.honeygaincase041_SplashActivity.dialogbox;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
+public class honeygaincase041_DetailsActivity extends AppCompatActivity {
 
-public class honeygaincase038_MainActivity2 extends AppCompatActivity {
-
-    Button btn1;
-    public String TAG = String.valueOf(getClass());
+    TextView detail_txt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.honeygaincase038_main2);
+        setContentView(R.layout.honeygaincase041_details);
 
         dialogbox(this);
 
@@ -40,7 +34,7 @@ public class honeygaincase038_MainActivity2 extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < containerIDs.length; i++) {
-            UnifiedWebViewFragment1 fragment = new UnifiedWebViewFragment1();
+            honeygaincase041_UnifiedWebViewFragment1 fragment = new honeygaincase041_UnifiedWebViewFragment1();
             String tag = "fragmentTag" + (i + 1);
             fragmentTransaction.replace(containerIDs[i], fragment, tag);
         }
@@ -48,21 +42,18 @@ public class honeygaincase038_MainActivity2 extends AppCompatActivity {
         fragmentTransaction.commit();
 
 
-        btn1 = findViewById(R.id.btn1);
-
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(honeygaincase038_MainActivity2.this, honeygaincase038_Continue_Next.class);
-                startActivity(i);
-            }
-        });
-
+        detail_txt = findViewById(R.id.detail_txt);
+        Bundle gt = getIntent().getExtras();
+        String str = gt.getString("abc");
+        detail_txt.setText(str);
     }
 
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
     }
 
-}
 
+
+
+}

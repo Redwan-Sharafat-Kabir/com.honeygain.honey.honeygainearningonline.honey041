@@ -1,4 +1,4 @@
-package com.honeygaincash.honeygaincase038;
+package com.honeygaincash.honeygaincase041;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -16,13 +16,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class UnifiedWebViewFragment extends Fragment {
+public class honeygaincase041_UnifiedWebViewFragment extends Fragment {
     private WebView webView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.honeygaincase038_fragment_webview, container, false);
+        View view = inflater.inflate(R.layout.honeygaincase041_fragment_webview, container, false);
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         String customUrl = sharedPreferences.getString("data1", "");

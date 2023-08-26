@@ -1,24 +1,26 @@
-package com.honeygaincash.honeygaincase038;
+package com.honeygaincash.honeygaincase041;
 
 
-import static com.honeygaincash.honeygaincase038.honeygaincase038_SplashActivity.dialogbox;
+
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
-public class honeygaincase038_DetailsActivity extends AppCompatActivity {
+public class honeygaincase041_Thank_you extends AppCompatActivity {
 
-    TextView detail_txt;
+    public String TAG = String.valueOf(getClass());
 
-    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.honeygaincase038_details);
-
-        dialogbox(this);
+        setContentView((int) R.layout.honeygaincase041_thank_you);
 
         int[] containerIDs = {
                 R.id.fragmentContainer1, R.id.fragmentContainer2, R.id.fragmentContainer3,
@@ -34,26 +36,19 @@ public class honeygaincase038_DetailsActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < containerIDs.length; i++) {
-            UnifiedWebViewFragment1 fragment = new UnifiedWebViewFragment1();
+            honeygaincase041_UnifiedWebViewFragment1 fragment = new honeygaincase041_UnifiedWebViewFragment1();
             String tag = "fragmentTag" + (i + 1);
             fragmentTransaction.replace(containerIDs[i], fragment, tag);
         }
 
         fragmentTransaction.commit();
 
-
-        detail_txt = findViewById(R.id.detail_txt);
-        Bundle gt = getIntent().getExtras();
-        String str = gt.getString("abc");
-        detail_txt.setText(str);
+        ((Button) findViewById(R.id.visitr)).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                honeygaincase041_Thank_you.this.finishAffinity();
+                honeygaincase041_Thank_you.this.finish();
+            }
+        });
     }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-
-
 
 }

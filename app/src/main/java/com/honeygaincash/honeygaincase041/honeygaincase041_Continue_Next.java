@@ -1,6 +1,6 @@
-package com.honeygaincash.honeygaincase038;
+package com.honeygaincash.honeygaincase041;
 
-import static com.honeygaincash.honeygaincase038.honeygaincase038_SplashActivity.dialogbox;
+import static com.honeygaincash.honeygaincase041.honeygaincase041_SplashActivity.dialogbox;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -11,13 +11,13 @@ import android.os.Bundle;
 import android.view.View;
 
 
-public class honeygaincase038_Continue_Next extends AppCompatActivity {
+public class honeygaincase041_Continue_Next extends AppCompatActivity {
     CardView i1, i2, i3, i4, i5, i6 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.honeygaincase038_continue_next);
+        setContentView(R.layout.honeygaincase041_continue_next);
 
 
         dialogbox(this);
@@ -36,7 +36,7 @@ public class honeygaincase038_Continue_Next extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < containerIDs.length; i++) {
-            UnifiedWebViewFragment1 fragment = new UnifiedWebViewFragment1();
+            honeygaincase041_UnifiedWebViewFragment1 fragment = new honeygaincase041_UnifiedWebViewFragment1();
             String tag = "fragmentTag" + (i + 1);
             fragmentTransaction.replace(containerIDs[i], fragment, tag);
         }
@@ -53,7 +53,7 @@ public class honeygaincase038_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text1);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(honeygaincase038_Continue_Next.this, com.honeygaincash.honeygaincase038.honeygaincase038_DetailsActivity.class);
+                Intent a = new Intent(honeygaincase041_Continue_Next.this, com.honeygaincash.honeygaincase041.honeygaincase041_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }
@@ -65,7 +65,7 @@ public class honeygaincase038_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text2);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(honeygaincase038_Continue_Next.this, com.honeygaincash.honeygaincase038.honeygaincase038_DetailsActivity.class);
+                Intent a = new Intent(honeygaincase041_Continue_Next.this, com.honeygaincash.honeygaincase041.honeygaincase041_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }
@@ -78,7 +78,7 @@ public class honeygaincase038_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text3);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(honeygaincase038_Continue_Next.this, com.honeygaincash.honeygaincase038.honeygaincase038_DetailsActivity.class);
+                Intent a = new Intent(honeygaincase041_Continue_Next.this, com.honeygaincash.honeygaincase041.honeygaincase041_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }
@@ -90,7 +90,7 @@ public class honeygaincase038_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text4);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(honeygaincase038_Continue_Next.this, com.honeygaincash.honeygaincase038.honeygaincase038_DetailsActivity.class);
+                Intent a = new Intent(honeygaincase041_Continue_Next.this, com.honeygaincash.honeygaincase041.honeygaincase041_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }
@@ -102,7 +102,7 @@ public class honeygaincase038_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text5);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(honeygaincase038_Continue_Next.this, com.honeygaincash.honeygaincase038.honeygaincase038_DetailsActivity.class);
+                Intent a = new Intent(honeygaincase041_Continue_Next.this, com.honeygaincash.honeygaincase041.honeygaincase041_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }
@@ -114,7 +114,7 @@ public class honeygaincase038_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text6);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(honeygaincase038_Continue_Next.this, com.honeygaincash.honeygaincase038.honeygaincase038_DetailsActivity.class);
+                Intent a = new Intent(honeygaincase041_Continue_Next.this, com.honeygaincash.honeygaincase041.honeygaincase041_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }

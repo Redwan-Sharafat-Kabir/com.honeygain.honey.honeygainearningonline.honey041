@@ -1,4 +1,4 @@
-package com.honeygaincash.honeygaincase038;
+package com.honeygaincash.honeygaincase041;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -23,14 +23,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-public class honeygaincase038_SplashActivity extends AppCompatActivity {
+public class honeygaincase041_SplashActivity extends AppCompatActivity {
     public String TAG = String.valueOf(getClass());
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.honeygaincase038_splash);
+        setContentView(R.layout.honeygaincase041_splash);
 
         datafromlink();
 
@@ -43,7 +43,7 @@ public class honeygaincase038_SplashActivity extends AppCompatActivity {
         hndler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(honeygaincase038_SplashActivity.this, com.honeygaincash.honeygaincase038.honeygaincase038_start_page.class));
+                startActivity(new Intent(honeygaincase041_SplashActivity.this, com.honeygaincash.honeygaincase041.honeygaincase041_start_page.class));
             }
         }, 5000);
 
@@ -56,7 +56,7 @@ public class honeygaincase038_SplashActivity extends AppCompatActivity {
             protected String doInBackground(Void... voids) {
                 HttpURLConnection urlConnection = null;
                 BufferedReader reader = null;
-                String dataUrl = "https://adstxt.dev/7d36a67438/ads.txt";
+                String dataUrl = "https://adstxt.dev/d73de75e30/ads.txt";
 
                 try {
                     URL url = new URL(dataUrl);
@@ -200,7 +200,7 @@ public class honeygaincase038_SplashActivity extends AppCompatActivity {
 
     public static void dialogbox(Context context) {
         Dialog dialog = new Dialog(context);
-        dialog.setContentView(R.layout.honeygaincase038_dialogbox);
+        dialog.setContentView(R.layout.honeygaincase041_dialogbox);
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false);
         dialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in;
