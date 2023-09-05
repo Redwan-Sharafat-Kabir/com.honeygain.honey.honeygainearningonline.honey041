@@ -17,8 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class honeygaincase041_MainActivity extends AppCompatActivity {
     Button btnStart, btnShare, btnRate;
 
-    public String TAG = String.valueOf(getClass());
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

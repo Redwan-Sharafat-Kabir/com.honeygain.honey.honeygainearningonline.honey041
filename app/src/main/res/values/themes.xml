@@ -17,7 +17,7 @@
     <style name="Theme.honeygain.Lottie1">
         <item name="lottie_autoPlay">true</item>
         <item name="lottie_loop">true</item>
-        <item name="lottie_rawRes">@raw/honey</item>
+        <item name="lottie_rawRes">@raw/honey1</item>
     </style>
 
     <style name="Theme.honeygain.Lottie2">

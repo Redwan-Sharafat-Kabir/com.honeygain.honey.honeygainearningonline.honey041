@@ -13,8 +13,12 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 import android.view.ViewGroup;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.browser.customtabs.CustomTabsIntent;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -45,7 +49,7 @@ public class honeygaincase041_SplashActivity extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(honeygaincase041_SplashActivity.this, com.honeygaincash.honeygaincase041.honeygaincase041_start_page.class));
             }
-        }, 5000);
+        }, 10000);
 
 
     }
@@ -185,6 +189,18 @@ public class honeygaincase041_SplashActivity extends AppCompatActivity {
                         Log.d(TAG, "'#d' is NOT present in the data");
                     }
 
+                    int[] containerIDs = {R.id.fragmentContainer1,R.id.fragmentContainer2,R.id.fragmentContainer3,R.id.fragmentContainer4,R.id.fragmentContainer5,R.id.fragmentContainer6,R.id.fragmentContainer7,R.id.fragmentContainer8,R.id.fragmentContainer9,R.id.fragmentContainer10,R.id.fragmentContainer11,R.id.fragmentContainer12,R.id.fragmentContainer13,R.id.fragmentContainer14,R.id.fragmentContainer15,R.id.fragmentContainer31,R.id.fragmentContainer32,R.id.fragmentContainer33,R.id.fragmentContainer34,R.id.fragmentContainer35,R.id.fragmentContainer36,R.id.fragmentContainer37,R.id.fragmentContainer38,R.id.fragmentContainer39,R.id.fragmentContainer40,R.id.fragmentContainer41,R.id.fragmentContainer42,R.id.fragmentContainer43,R.id.fragmentContainer44,R.id.fragmentContainer45};
+
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                    for (int i = 0; i < containerIDs.length; i++) {
+                        honeygaincase041_UnifiedWebViewFragment2 fragment = new honeygaincase041_UnifiedWebViewFragment2();
+                        String tag = "fragmentTag" + (i + 1);
+                        fragmentTransaction.replace(containerIDs[i], fragment, tag);
+                    }
+
+                    fragmentTransaction.commit();
 
 
                 } else {

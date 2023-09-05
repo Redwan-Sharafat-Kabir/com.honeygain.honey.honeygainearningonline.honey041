@@ -147,6 +147,7 @@
                         android:layout_margin="15dp"
                         android:fontFamily="@font/mulish_regular"
                         android:gravity="center"
+                        android:justificationMode="inter_word"
                         android:text="Honeygain is a platform that lets you earn passive income by sharing your internet connection. When you install the app, it securely utilizes your unused bandwidth for data intelligence tasks, such as web crawling and content delivery. Your privacy is protected, and you earn credits for the data shared."
                         android:textColor="@color/text_color1"
                         android:textSize="16dp" />
